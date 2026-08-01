@@ -1,6 +1,8 @@
 from expense import Expense
 import calendar
 import datetime
+
+
 def main():
     print(f"🎯 Running Expense Tracker!")
     expense_file_path = "expenses.csv"
@@ -14,4 +16,9 @@ def main():
 
     # Read file and summarize expenses.
     summarize_expenses(expense_file_path, budget)
+    
+    def get_user_expense():
+    print(f"🎯 Getting User Expense")
+    expense_name = input("Enter expense name: ")
+    expense_amount = float(input("Enter expense amount: "))
     
