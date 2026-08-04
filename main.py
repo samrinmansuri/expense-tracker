@@ -73,3 +73,15 @@ def summarize_expenses(expense_file_path, budget):
                 category=expense_category,
             )
             expenses.append(line_expense)
+     amount_by_category = {}
+    for expense in expenses:
+        key = expense.category
+        if key in amount_by_category:
+            amount_by_category[key] += expense.amount
+        else:
+            amount_by_category[key] = expense.amount
+
+    print("Expenses By Category 📈:")
+    for key, amount in amount_by_category.items():
+        print(f"  {key}: ${amount:.2f}")
+        
