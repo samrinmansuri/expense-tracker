@@ -43,4 +43,17 @@ def main():
                 name=expense_name, category=selected_category, amount=expense_amount
             )
             return new_expense
-        
+         else:
+            print("Invalid category. Please try again!")
+
+
+def save_expense_to_file(expense: Expense, expense_file_path):
+    print(f"🎯 Saving User Expense: {expense} to {expense_file_path}")
+    with open(expense_file_path, "a") as f:
+        f.write(f"{expense.name},{expense.amount},{expense.category}\n")
+
+
+def summarize_expenses(expense_file_path, budget):
+    print(f"🎯 Summarizing User Expense")
+    expenses: list[Expense] = []
+    
