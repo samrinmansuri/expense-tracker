@@ -39,4 +39,8 @@ def main():
 
         if selected_index in range(len(expense_categories)):
             selected_category = expense_categories[selected_index]
-            
+            new_expense = Expense(
+                name=expense_name, category=selected_category, amount=expense_amount
+            )
+            return new_expense
+        
