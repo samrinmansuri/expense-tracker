@@ -95,3 +95,6 @@ def summarize_expenses(expense_file_path, budget):
     daily_budget = remaining_budget / remaining_days
     print(green(f"👉 Budget Per Day: ${daily_budget:.2f}"))
     
+def green(text):
+    return f"\033[92m{text}\033[0m"
+
