@@ -98,3 +98,6 @@ def summarize_expenses(expense_file_path, budget):
 def green(text):
     return f"\033[92m{text}\033[0m"
 
+if __name__ == "__main__":
+    main()
+    
