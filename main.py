@@ -17,7 +17,7 @@ def main():
     # Read file and summarize expenses.
     summarize_expenses(expense_file_path, budget)
     
-    def get_user_expense():
+def get_user_expense():
     print(f"🎯 Getting User Expense")
     expense_name = input("Enter expense name: ")
     expense_amount = float(input("Enter expense amount: "))
@@ -43,7 +43,7 @@ def main():
                 name=expense_name, category=selected_category, amount=expense_amount
             )
             return new_expense
-         else:
+        else:
             print("Invalid category. Please try again!")
 
 
@@ -73,7 +73,7 @@ def summarize_expenses(expense_file_path, budget):
                 category=expense_category,
             )
             expenses.append(line_expense)
-     amount_by_category = {}
+    amount_by_category = {}
     for expense in expenses:
         key = expense.category
         if key in amount_by_category:
@@ -100,4 +100,3 @@ def green(text):
 
 if __name__ == "__main__":
     main()
-    
